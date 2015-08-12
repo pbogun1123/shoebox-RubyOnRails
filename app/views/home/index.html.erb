@@ -1,0 +1,63 @@
+<h1>Welcome to ShoeBox!</h1>
+
+
+<table>
+<table border="">
+<tr>
+
+<td width="80%"; valign="top";>
+
+	<h2> Featured Post </h2>
+	<h5> By: Piotr Bogun </h5>
+	<%= image_tag 'avatar.jpg', size: "80x80" %>
+	<p> We are proud to release our first version of ShoeBox! ShoeBox aims to be a website to develop communities.
+		Clients are free to post videos and blogs to share with the community. We are aiming to make this process as easy
+		and streamlined as possible. We have many improvements in the pipeline that we are anxious to share. We will be
+		providing a post in the near future documenting all the changes we will have in store. In the meantime we hope you
+		enjoy our service! If you have any questions or comments we encourage you 
+		to share them with us on our contact page.
+	</p>
+	
+<hr>
+
+	<h2> Featured Video </h2>
+	<p> Talk by DePaul's own Massimo Di Pierro at PyCon 2012! </p>
+	<iframe width="560" height="315" src="//www.youtube.com/embed/iMUX9NdN8YE" frameborder="0" allowfullscreen></iframe>
+	
+<hr>
+
+	<h2> Featured Article </h2>
+	<h4> NVIDIA Announces CUDA 6: Unified Memory for CUDA | AnandTech </h4>
+	<%= image_tag 'nvidiaCuda.jpg', size: "80x50" %>
+	<p> "Unlike some prior CUDA releases, NVIDIA isn’t touting a large number of new features for this version of CUDA. 
+		 But what few elements NVIDIA is working on are going to be very significant." </p>
+		 
+	<a href="http://www.anandtech.com/show/7515/nvidia-announces-cuda-6-unified-memory-for-cuda">Full article on AnandTech</a>
+	
+<hr>
+
+	<div id="mailContent";>			
+		<form name="mailingInformation">
+			<p><h5>Join our mailing list to stay up to date on current specials!</h5></p>
+			<p>Name: <input type="text" name="txtName" maxlength="50" /></p>
+			<p>E-Mail: <input type="text" name="txtEmail" maxlength="50" /></p><BR />
+			<input type="submit" name="btnSubmit" value="Subscribe to Mailing List!" onClick="mailsubmit()" />
+		</form>
+	</div>
+</td>
+
+<td width ="20%">
+<h5> ShoeBox Promotions </h5>
+	<hr>
+<% @promotions.each do |p| %>
+    <em> <%= p.title %> </em> </br>
+    <%= p.description %> </br>
+    <%= image_tag p.imagepath %> </br>
+    Starts: <%= p.startdate %> </br>
+    Ends: <%= p.enddate %> </br>
+	<hr>
+<% end %>
+
+</td>
+</tr>
+</table>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Client:</b>
+  <%= @c_blog.client_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @c_blog.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @c_blog.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_c_blog_path(@c_blog) %> |
+<%= link_to 'Back', c_blogs_path %>

@@ -1,0 +1,2 @@
+module CVideosHelper
+end

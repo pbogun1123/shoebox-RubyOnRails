@@ -1,0 +1,27 @@
+<h1>Video Index</h1>
+
+<table>
+  <tr>
+    <th>Client</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @c_videos.each do |c_video| %>
+  <tr>
+    <td><%= c_video.client_id %></td>
+    <td><%= c_video.title %></td>
+    <td><%= c_video.content %></td>
+    <td><%= link_to 'Show', c_video %></td>
+    <td><%= link_to 'Edit', edit_c_video_path(c_video) %></td>
+    <td><%= link_to 'Destroy', c_video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Video', new_c_video_path %>

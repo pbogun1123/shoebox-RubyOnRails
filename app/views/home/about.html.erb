@@ -1,0 +1,37 @@
+<h1>About Us</h1>
+
+<table>
+<table border="">
+<tr>
+<td width="80%"; valign="top";>
+
+	<p> This website is used as a learning tool for using Ruby On Rails. The mindset behind this website
+		was to simulate an application that could be used by users to share content with each other. The goal
+		was to allow various users to share their own videos and blogs, to meet others with similar interests,
+		and to be exposed to various topics of interest. While the website currently only holds records for videos and blog posts, 
+		I would like to keep adding on to this to allow more options and possibilities. This website was used purely for educational 
+		purposes. </p>		
+	</BR>
+		
+	<p>	To contact me please physically email Piotr Bogun at pbogun1123@gmail.com as the contact forms do not actually
+		work.
+	</p>
+ 
+</td>
+<vr>
+
+<td width ="20%">
+<h5> Special ShoeBox Promotions </h5>
+	<hr>
+<% @promotions.each do |p| %>
+    <em> <%= p.title %> </em> </br>
+    <%= p.description %> </br>
+    <%= image_tag p.imagepath %> </br>
+    Starts: <%= p.startdate %> </br>
+    Ends: <%= p.enddate %> </br>
+	<hr>
+<% end %>
+
+</td>
+</tr>
+</table>

@@ -1,0 +1,49 @@
+<h1>Contact Us</h1>
+
+<table>
+<table border="">
+<tr>
+<td width="80%"; valign="top";>
+
+	<div id="contactInformation">
+		<h4> We are always pleased to hear from you! </h4>
+		
+			<form name="customerInformation">
+				<p>Name: <input type="text" name="txtFirstName" maxlength="50" /></p>
+				<p>Email: <input type="text" name="txtAddress" maxlength="50" /></p>
+				<p>Comments: <input type="text" name="txtPhoneNumber" maxlength="50" /></p>
+				<br />
+				
+				<p><input type="submit" name="btnSubmit" value="Send" onClick="readFormData()" /></p>
+			</form>
+	</div>
+
+<HR>
+
+	<div id="mailContent";>			
+		<form name="mailingInformation">
+			<p><h5>Join our mailing list to stay up to date on current specials!</h5></p>
+			<p>Name: <input type="text" name="txtName" maxlength="50" /></p>
+			<p>E-Mail: <input type="text" name="txtEmail" maxlength="50" /></p><BR />
+			<input type="submit" name="btnSubmit" value="Subscribe to Mailing List!" onClick="mailsubmit()" />
+		</form>
+	</div>
+	
+</td>
+<vr>
+
+<td width ="20%">
+<h5> Special ShoeBox Promotions </h5>
+	<hr>
+<% @promotions.each do |p| %>
+    <em> <%= p.title %> </em> </br>
+    <%= p.description %> </br>
+    <%= image_tag p.imagepath %> </br>
+    Starts: <%= p.startdate %> </br>
+    Ends: <%= p.enddate %> </br>
+	<hr>
+<% end %>
+
+</td>
+</tr>
+</table>
